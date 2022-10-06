@@ -921,6 +921,47 @@ more padding on the right to avoid overlap
     margin-left: -6px;
 }
 
+.c-toggle-password__checkbox+.c-toggle-password__label .c-toggle-password__icon--hide {
+    position: absolute;
+    display: none;
+    top: 112px;
+    right: 20px;
+    height: 16px;
+    width: 16px;
+    fill: var(--global-color-neutral);
+}
+
+.c-toggle-password__checkbox+.c-toggle-password__label .c-toggle-password__icon--show {
+    position: absolute;
+    top: 112px;
+    right: 20px;
+    display: flex;
+    height: 16px;
+    width: 16px;
+    fill: var(--global-color-neutral);
+}
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--hide {
+
+    display: flex;
+    height: 16px;
+    width: 16px;
+    fill: var(--global-color-neutral);
+}
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--show {
+    display: none;
+    height: 16px;
+    width: 16px;
+    fill: var(--global-color-neutral);
+}
+
+.c-toggle-password__checkbox {
+    display: none;
+}
+
+
+
 /*
     Component: Custom Select
     ---
@@ -1349,11 +1390,11 @@ No media query since this is the default in mobile first design
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
 
     /*

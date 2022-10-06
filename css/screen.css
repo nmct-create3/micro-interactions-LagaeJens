@@ -924,8 +924,8 @@ more padding on the right to avoid overlap
 .c-toggle-password__checkbox+.c-toggle-password__label .c-toggle-password__icon--hide {
     position: absolute;
     display: none;
-    top: 112px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     height: 16px;
     width: 16px;
     fill: var(--global-color-neutral);
@@ -933,8 +933,8 @@ more padding on the right to avoid overlap
 
 .c-toggle-password__checkbox+.c-toggle-password__label .c-toggle-password__icon--show {
     position: absolute;
-    top: 112px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     display: flex;
     height: 16px;
     width: 16px;
@@ -942,7 +942,6 @@ more padding on the right to avoid overlap
 }
 
 .c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--hide {
-
     display: flex;
     height: 16px;
     width: 16px;
@@ -960,7 +959,30 @@ more padding on the right to avoid overlap
     display: none;
 }
 
+.c-label {
+    color: var(--label-color, var(--global-color-neutral-xx-dark));
+}
 
+.c-input {
+    border: var(--global-borderWidth) solid var(--input-borderColor, var(--global-input-borderColor));
+}
+
+.has-error {
+    --label-color: var(--global-color-error);
+    --input-borderColor: var(--global-input-error-borderColor);
+}
+
+.has-error .c-label {
+    color: var(--global-color-error);
+}
+
+.has-error .c-input {
+    border-color: var(--global-color-error);
+}
+
+.c-toggle-password-container {
+    position: relative;
+}
 
 /*
     Component: Custom Select

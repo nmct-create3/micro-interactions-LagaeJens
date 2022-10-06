@@ -4,11 +4,14 @@ function handleFloatingLabel() {
 
 function handlePasswordSwitcher() {
     document.querySelector('.js-togglePassword').addEventListener('click', function () {
-        const passwordInput = document.querySelector('togglePassword');
+        console.log('clicked');
+        const passwordInput = document.querySelector('.js-PasswordShow');
         if (passwordInput.getAttribute('type') === 'password') {
             passwordInput.setAttribute('type', 'text');
+            console.log('show');
         } else {
             passwordInput.setAttribute('type', 'password');
+            console.log('hide');
         }
     }
     );
